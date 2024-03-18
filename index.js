@@ -57,7 +57,7 @@ class BMKG {
      * @returns 
      */
     static Kabupaten = async (kabupaten) => {
-        const { data } = await axios.get(baseURL.dataWeb + '/API/cuaca/data-kecamatan.bmkg?kab=' + kabupaten)
+        const { data } = await axios.get(baseURL.dataWeb + '/API/cuaca/data-kecamatan.bmkg?kab=' + kabupaten.toLowerCase())
         let json = xml_parser.parse(data)
         if (json.data == '') {
             return []
