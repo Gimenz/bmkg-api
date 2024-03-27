@@ -66,12 +66,22 @@ class BMKG {
         }
     }
 
+    /**
+     * 
+     * @param {string} id id kecamatan
+     * @returns 
+     */
     static cuacaWeb = async (id) => {
         const { data } = await axios.get(baseURL.dataWeb + '/API/cuaca/cuaca-kecamatan.bmkg?id=' + id + '&detail=1')
         let json = xml_parser.parse(data)
         return json.cuaca_kecamatan
     }
 
+    /**
+     * 
+     * @param {string} id id kecamatan
+     * @returns 
+     */
     static cuacaApp = async (id) => {
         const { data } = await axios.get(baseURL.dataApp + '/api/cuaca/kec-id/lengkap/' + id)
         return data
