@@ -78,4 +78,4 @@ class BMKG {
     }
 }
 
-module.exports = BMKG;
+module.exports = { BMKG, ...require('./helpers') }

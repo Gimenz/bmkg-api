@@ -1,4 +1,4 @@
-export const kodeCuaca = {
+exports.kodeCuaca = {
     0: "☀️",
     1: "⛅",
     2: "⛅",
@@ -15,7 +15,7 @@ export const kodeCuaca = {
     97: "⛈"
 }
 
-export const kodeAngin = {
+exports.kodeAngin = {
     "N": "Utara",
     "NNE": "Utara-Timur Laut",
     "NE": "Timur Laut",
